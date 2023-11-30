@@ -1,50 +1,45 @@
-class protudo_novo1:
-    nome = "Melância"
-    qtd = 33
-    preco = 25
-    fornecedor = "Hortifruti"
+class protudo_novo:
 
-class produto_novo2:
-    nome =  "Chocolate"
-    qtd = 100
-    preco = 5
-    fornecedor = "Cacau Show"
+    def __init__(self, produto, nome, qtd, preco, fornecedor, prazo):
 
-class produto_novo3:
-    nome = "Computador"
-    qtd = 15
-    preco = 1500
-    fornecedor = "Positivo Tecnologia"
+        self.produto = produto
 
-class produto_novo4:
-    nome = "Mouse Gamer"
-    qtd = 67
-    preco = 200
-    fornecedor = "Hyperx gaming"
+        self.nome = nome
 
-class produtos_novos:
-    def exibir_produtos_novos():
-        print("PRODUTO 1:")
-        print("Nome:",protudo_novo1.nome)
-        print("quantidade:",protudo_novo1.qtd)
-        print("preço:",protudo_novo1.preco)
-        print("fornecedor:",protudo_novo1.fornecedor)
-        
-        print("\nPRODUTO 2:")
-        print("Nome:",produto_novo2.nome)
-        print("quantidade:",produto_novo2.qtd)
-        print("preço:",produto_novo2.preco)
-        print("fornecedor:",produto_novo2.fornecedor)
-        
-        print("\nPRODUTO 3:")
-        print("Nome:",produto_novo3.nome)
-        print("quantidade:",produto_novo3.qtd)
-        print("preço:",produto_novo3.preco)
-        print("fornecedor:",produto_novo3.fornecedor)
-        
-        print("\nPRODUTO 4:")
-        print("Nome:",produto_novo4.nome)
-        print("quantidade:",produto_novo4.qtd)
-        print("preço:",produto_novo4.preco)
-        print("fornecedor:",produto_novo4.fornecedor)
-    exibir_produtos_novos()
+        self.qtd = qtd
+
+        self.preco = preco
+
+        self.fornecedor = fornecedor
+
+        self.prazo = prazo
+
+    def print_produtos_novos(self):
+
+        print("PRODUTO", self.produto)
+
+        print("Nome:", self.nome)
+
+        print("Quantidade:", self.qtd)
+
+        print("Preço:", self.preco)
+
+        print("Fornecedor:", self.fornecedor)
+
+        print("Prazo:", self.prazo)
+
+        print()
+
+produto1 = protudo_novo("1","Melância", 33, 25, "Hortifruti", "10/12/2023")
+
+produto2 = protudo_novo("2","Chocolate", 100, 5, "Cacau Show", "03/12/2023")
+
+produto3 = protudo_novo("3","Notebook", 15, 1500, "Positivo Tecnologia", "01/01/2024")
+
+produto4 = protudo_novo("4","Mouse Gamer", 57,200,"Hyperx Gaming", "22/12/2023")
+
+produtos_novos = [produto1, produto2, produto3,produto4]
+
+for produto_novo in produtos_novos:
+    produto_novo.print_produtos_novos()
+

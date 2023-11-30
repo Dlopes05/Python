@@ -1,6 +1,7 @@
+
 class exibir_produtos_do_estoque:
     def exibir_produtos_do_estoque():
-        import estoque
+        import produtos_lojinha
 
 class exibir_produtos_novos_do_estoque:
     def exibir_produtos_novos_do_estoque():
